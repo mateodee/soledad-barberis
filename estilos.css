@@ -26,14 +26,9 @@ header a {
     text-decoration: none;
 }
 
-header h2 {
-    margin-left: 20px;
-    font-family: Century Gothic Pro;
-    font-weight: bold;
-    font-size: 28px;
-    width: 300px;
-    color: #000;
-    text-decoration: none;
+.logo {
+    width: 280px;
+    margin-left: 30px;
 }
 
 nav {
@@ -62,7 +57,7 @@ nav ul li a {
     color: black;
     text-decoration: none;
     font-size: 16px;
-    font-family: montserrat;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav a:hover {
@@ -71,7 +66,7 @@ nav a:hover {
 
 .active {
     color: #D57E08;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 /* Ocultar Menú Hamburguesa */
@@ -90,10 +85,11 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    z-index: -999;
 }
 
 footer div p {
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: bold;
 }
@@ -126,10 +122,10 @@ footer div p {
 
 .flecha {
     position: absolute;
-    width: 60px;
+    width: 50px;
     height: 40px;
     margin-bottom: 90px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-radius: 100px;
 }
 
@@ -220,7 +216,12 @@ section {
     margin-top: 40px;
     display: flex;
     flex-direction: row-reverse;
-    background-color: #2B2B2B;
+    background-color: #504d4d;
+    background-image: url(imagenes/obras2/rennaissance.jpg);
+    background-size: cover;
+    background-position: 40px;
+    background-blend-mode: overlay;
+    /* background-blend-mode: soft-light; */
     width: 65%;
     height: 450px;
     border-radius: 12px;
@@ -265,7 +266,7 @@ section {
     transform: skew(17deg);
     margin-top: 20px;
     color: #fff;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 23px;
     text-align: right;
 }
@@ -276,7 +277,7 @@ section {
     margin-left: 20px;
     margin-top: 100px;
     color: #fff;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     line-height: 50px;
     font-size: 20px;
 }
@@ -321,7 +322,7 @@ section {
     width: 80%;
     margin: auto;
     color: #fff;
-    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     text-align: justify;
 }
@@ -330,7 +331,7 @@ section {
     width: 90%;
     margin: auto;
     color: #fff;
-    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     text-align: right;
     margin-top: 20px;
@@ -343,7 +344,7 @@ section {
 .historia {
     margin-top: 20px;
     width: 100%;
-    height: 650px;
+    height: 600px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -369,16 +370,43 @@ section {
 }
 
 .info_personal h4 {
-    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     color: #D57E08;
     margin-bottom: 20px;
 }
 
 .info_personal p {
-    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     line-height: 35px;
+    text-align: justify;
+}
+
+.info_agregada {
+    background-color: #fff;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    transform: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.info_agregada h4 {
+    font-size: 15px;
+    border-bottom: #D57E08 2px solid;
+    display: inline;
+
+}
+
+.info_agregada p {
+    text-align: justify;
+}
+
+.info_agregada ul {
+    margin-left: 20px;
 }
 
 
@@ -386,7 +414,7 @@ section {
 /* Estilos Galería */
 .grid-container {
     width: 95%;
-    height: 1500px;
+    height: 4000px;
     box-sizing: border-box;
     margin: auto;
     margin-top: 30px;
@@ -430,7 +458,7 @@ section {
     position: absolute;
     top: 30px;
     left: 10px;
-    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: #000;
     text-decoration: none;
@@ -440,15 +468,146 @@ section {
     position: absolute;
     top: 60px;
     left: 10px;
-    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     color: #000;
     text-decoration: none;
 }
 
+/* Estilos Contacto */
+
+.contacto {
+    margin-top: 30px;
+    width: 98%;
+    height: 500px;
+}
+
+form {
+    width: 40%;
+    margin-top: 20px;
+    padding-top: 20px;
+    border: solid 2px #dfdfdfdb;
+    border-radius: 10px;
+}
+
+form div {
+    margin-bottom: 30px;
+}
+
+form label {
+    margin-left: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #D57E08;
+}
+
+form input {
+    width: 90%;
+    margin-left: 18px;
+    border: none;
+    border-bottom: 1px solid rgb(29, 29, 29);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    padding-bottom: 5px;
+    background-color: #fff0;
+}
+
+form textarea {
+    width: 90%;
+    height: 80px;
+    margin-left: 15px;
+    border: none;
+    border-bottom: 1px solid rgb(29, 29, 29);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    padding-bottom: 5px;
+    line-height: 25px;
+    background-color: #fff0;
+}
+
+form .button {
+    margin-left: 170px;
+    width: 200px;
+    height: 35px;
+    border-radius: 0px;
+    background-color: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    color: #D57E08;
+    border: #D57E08 solid 1px;
+    transition: 1s;
+}
+
+form .button:hover {
+    color: #fff;
+    background-color: #D57E08;
+    border: none;
+    transition: 0.5s;
+}
+
+.sub {
+    width: 45%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sub p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#naranja {
+    color: #D57E08;
+    font-size: 32px;
+}
+
+.redes_contacto {
+    width: 640px;
+    height: 200px;
+    margin-top: -30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.redes_contacto p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    margin-right: 150px;
+    color: #D57E08;
+    font-weight: 500;
+}
+
+.redes_contacto a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.redes_contacto a:hover {
+    color: #D57E08;
+}
+
+.redes_contacto a span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #D57E08;
+}
+
+.obra_contacto {
+    width: 360px;
+}
 
 
-/* Index Versión Mobile */
+/* Versión Mobile */
 
 @media only screen and (min-width: 280px) and (max-width: 700px) {
     
@@ -462,8 +621,9 @@ section {
         top: 0;
     }
 
-    header h2 {
-        font-size: 18px;
+    .logo {
+        width: 170px;
+        margin-left: 20px;
     }
    
     nav {
@@ -617,7 +777,7 @@ section {
     .menu-wrap .menu > div > div > ul > li > a {
         color: inherit;
         text-decoration: none;
-        font-family: poppins, montserrat;
+        font-family: 'Poppins', sans-serif;
         transition: color 0.4s ease;
     }
 
@@ -657,14 +817,14 @@ section {
 
     .info_footer2 p {
         width: 100px;
-        font-family: poppins;
+        font-family: 'Poppins', sans-serif;
         font-size: 8px;
         font-weight: bold;
         padding-bottom: 20px;
     }
     
     footer div p {
-        font-family: poppins;
+        font-family: 'Poppins', sans-serif;
         font-size: 8px;
         font-weight: bold;
     }
@@ -771,7 +931,7 @@ section {
     .historia {
         margin-top: -15px;
         width: 100%;
-        height: 1100px;
+        height: 1150px;
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -785,26 +945,46 @@ section {
     }
     
     .info_personal {
-        width: 900px;
-        height: 500px;
+        width: 90%;
+        height: 650px;
+        border-bottom: #D57E08 2px solid;
     }
     
     .info_personal h4 {
-        font-family: poppins, Arial, Helvetica, sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 20px;
         color: #D57E08;
         margin-bottom: 20px;
         text-align: center;
-        margin-top: 20px;
+        margin-top: -10px;
     }
     
     .info_personal p {
         width: 300px;
         margin: auto;
-        font-family: poppins, Arial, Helvetica, sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 12px;
         line-height: 24px;
         text-align: justify;
+    }
+
+    .info_agregada {
+        background-color: #fff;
+        width: 90%;
+        height: 1080px;
+        margin: auto;
+        transform: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .info_agregada h4 {
+        font-size: 14px;
+    }
+
+    .info_agregada p {
+        font-size: 12px;
     }
 
     /* Estilos Galería Mobile */
@@ -830,7 +1010,73 @@ section {
     .grid-item img {
         width: 200px;
     }
-    
+
+    .info_obras {
+        display: none;
+    }
+
+
+    /* Estilos Contacto Mobile */
+
+    .contacto {
+        height: 600px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    form {
+        width: 90%;
+        height: 400px;
+        margin-top: -20px;
+    }
+
+    form textarea {
+        height: 120px;
+    }
+
+    form .button {
+        margin-left: 60px;
+        transition: none;
+    }
+
+    form .button:hover {
+        color: #D57E08;
+        background-color: #fff;
+        border: #D57E08 solid 1px;
+        transition: none;
+    }
+
+    .sub {
+        width: 95%;
+        height: 150px;
+        margin-top: -30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sub p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        margin: auto;
+    }
+
+    #naranja {
+        color: #D57E08;
+        font-size: 25px;
+    }
+
+    .dos_puntos {
+        display: none;
+    }
+
+    .redes_contacto {
+        display: none;
+    }
+
 }
 
 
